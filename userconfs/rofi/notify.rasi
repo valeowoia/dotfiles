@@ -1,0 +1,26 @@
+/*********************************************************
+******  USING ROFI AS i3 internal notifier theme    ******
+**********************************************************/
+
+* {
+    font:   "BigBlueTerm437 Nerd Font 9";
+
+    bg0:     #E53935F2;
+    fg0:     #D8DEE9;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+    
+
+    margin:     5;
+}
+
+window {
+    location:   north east;
+    width:      20%;
+    spacing:    8px; 
+    padding:    8px;
+
+
+    background-color:   @bg0;
+}

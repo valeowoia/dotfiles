@@ -1,0 +1,9 @@
+configuration {
+display-drun: ">>>";
+icon-theme: "Catppuccin-Mocha-Standard-Blue";
+}
+
+
+@theme "~/.config/userconfs/theme.rasi"
+
+

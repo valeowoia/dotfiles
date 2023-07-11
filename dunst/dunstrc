@@ -1,0 +1,49 @@
+[global]
+	font = "BigBlueTerm437 Nerd Font 9"
+	markup = yes
+	format = "<b>%a: %s</b> <u>%p</u>\n%b"
+	sort = yes
+	indicate_hidden = yes
+	alignment = left
+	icon_position = left
+	show_age_threshold = 60
+	word_wrap = no
+	ignore_newline = no
+	width = (250, 720)
+	height = 100
+	origin = top-right
+	offset = 8x8
+	transparency = 0
+	idle_threshold = 120
+	monitor = 0
+	follow = keyboard
+	transparency = 15
+	sticky_history = yes
+	line_height = 0
+	separator_height = 2
+	padding = 4
+	horizontal_padding = 4
+	separator_color = frame
+	dmenu = dmenu -p dunst
+	browser = /usr/bin/x-www-browser
+	frame_width = 1
+	frame_color = "#464a73"
+	max_icon_size = 32
+	mouse_left_click = close_current
+	mouse_right_click = context
+
+[urgency_low]
+	background = "#1a1a1a"
+	foreground = "#a3a3a3"
+	timeout = 0
+
+[urgency_normal]
+	background = "#1a1a1a"
+	foreground = "#c2f2f2"
+	timeout = 0
+
+[urgency_critical]
+	background = "#733453"
+	background = "#bf6979"
+	timeout = 0
+
