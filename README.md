@@ -68,7 +68,7 @@ Kernels - linux
 
 Additional packages - 
 ```bash
-xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts
+xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus
 ```
 
 Network configuration - Use NetworkManager
