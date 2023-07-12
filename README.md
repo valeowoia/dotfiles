@@ -3,6 +3,13 @@
 
 Hewwo. There is my smol dotfiles collection for i3 window manager with gaps, polybar, rofi as launcher and system notifications daemon, nautilus as file manager and 
 
+## Screenshots - https://uwu.waw.pl/gallery/
+
+## Credits - https://github.com/valeowoia/dotfiles#Credits
+
+## Pay attention to change backlight buttons binding in ~/.config/i3/config after installation
+
+
 ## Installation
 
 ### 1. Install Arch Linux with i3wm as main system
@@ -68,7 +75,7 @@ Kernels - linux
 
 Additional packages - 
 ```bash
-xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus lxappearence lightdm-webkit2-greeter base-devel
+xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus lxappearence lightdm-webkit2-greeter base-devel dunst blueman light
 ```
 
 Network configuration - Use NetworkManager
@@ -142,4 +149,109 @@ Now open a tty2 with Ctrl+Alt+F2, log in and reboot your machine with
 ```bash 
 reboot
 ```
+
+In greeter session, choose i3 in drop-down menu and log in to i3wm
+
+### 3. Use my configuration files
+
+Open xterm with Win+Enter
+
+Remove all dummy configurations
+
+```bash
+rm -rf ~/.config/i3/ && rm -rf ~/.config/polybar/ && rm -rf ~/.config/dunst/ && rm -rf ~/.config/kitty/ && rm -rf ~/.config/gtk-3.0/
+```
+
+Fetch this repo
+
+```bash
+git clone https://github.com/valeowoia/dotfiles.git
+```
+
+Copy i3wm configuration
+
+```bash
+cp ~/dotfiles/i3/ ~/.config/i3/
+```
+
+Copy polybar configuration
+
+```bash
+cp ~/dotfiles/polybar/ ~/.config/polybar/
+```
+
+Copy additional scripts
+
+```bash
+cp ~/dotfiles/userconfs/ ~/.config/userconfs/
+```
+
+Copy rofi configuration
+
+```bash
+cp ~/dotfiles/rofi/ ~/.config/rofi
+```
+
+Copy dunst configuration
+
+```bash
+cp ~/dotfiles/dunst/ ~/.config/dunst/
+```
+
+Copy kitty configuration
+
+```bash
+cp ~/dotfiles/kitty/ ~/.config/kitty/
+```
+Copy User picture and wallpaper for lightdm
+
+```bash
+sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png && sudo cp ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo cp ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png
+```
+
+Copy GTK icons and fonts configuration
+
+```bash
+cp ~/dotfiles/gtk-3.0/ ~/.config/gtk-3.0/
+```
+
+### 4. Enable Bluetooth for starting on boot
+
+```bash
+systemctl enable bluetooth
+```
+
+### 5. Set up wallpapers for desktop and lockscreen
+
+```bash
+cp ~/dotfiles/images/wall1.jpg ~/.config/wall1.jpg
+```
+
+```bash
+cp ~/dotfiles/images/lock1.png ~/.config/lock1.png
+```
+
+### 6. Install BigBlueTerm nerd fonts for correct polybar working
+
+```bash
+sudo cp ~/dotfiles/BigBlueTerminal/ /usr/share/fonts/BigBlueTerminal/
+```
+
+```bash
+fc-cache -fv
+```
+
+### 7. Install full icon pack for rofi program launcher
+
+```bash
+sudo pacman -Sy papirus-icon-theme
+```
+
+### 8. Reboot your computer to see changes
+
+## Credits
+
+Thanks theese people for helping and some configurations
+
+*mathisen99, domi, mkf, ar, hatkidchan, lisek, q3k*
 
