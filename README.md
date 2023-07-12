@@ -68,7 +68,7 @@ Kernels - linux
 
 Additional packages - 
 ```bash
-xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus lxappearence lightdm-webkit2-greeter 
+xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus lxappearence lightdm-webkit2-greeter base-devel
 ```
 
 Network configuration - Use NetworkManager
@@ -97,8 +97,6 @@ makepkg -si
 
 ### 2. Configure lightdm (logon greeter)
 
-#### 2.1 download and install lightdm Aether theme
-
 ```bash 
 git clone https://github.com/NoiSek/Aether.git
 ```
@@ -109,5 +107,39 @@ cd Aether
 
 ```bash
 makepkg -si
+```
+
+```bash
+cd /etc/lightdm
+```
+
+```bash
+sudo nano lightdm.conf
+```
+
+Press Ctrl+W and type 
+
+```
+#greeter-session=example-gtk-gnome
+```
+
+Change it to
+
+```
+greeter-session=lightdm-webkit2-greeter
+```
+
+Press Ctrl+S and Ctrl+X to exit
+
+Enable lightdm.service to get lightdm on boot
+
+```bash
+sudo systemctl enable lightdm
+```
+
+Now open a tty2 with Ctrl+Alt+F2, log in and reboot your machine with
+
+```bash 
+reboot
 ```
 
