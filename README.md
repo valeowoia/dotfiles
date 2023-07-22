@@ -247,5 +247,5 @@ sudo pacman -Sy papirus-icon-theme
 
 Thanks theese people for helping and some configurations
 
-*mathisen99, sdomi, mkf, ar, hatkidchan, lisek, q3k, nerd font team*
+*mathisen99, sdomi, mkf, ar, hatkidchan, lisek, q3k, nerd font team, daniruiz*
 
