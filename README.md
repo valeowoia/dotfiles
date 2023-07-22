@@ -75,7 +75,7 @@ Kernels - linux
 
 Additional packages - 
 ```bash
-xterm firefox git nano mc polybar i3-wm i3lock neofetch afetch i3bar zsh lightdm picom dmenu feh rofi kitty xrandr arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus lxappearence lightdm-webkit2-greeter base-devel dunst blueman light
+xterm firefox git nano mc polybar i3-wm i3lock neofetch i3status zsh lightdm picom dmenu feh rofi kitty arandr firefox zip unzip imagemagick calc mpd network-manager-applet xorg-xbacklight light noto-fonts-cjk noto-fonts-emoji noto-fonts nautilus lxappearance lightdm-webkit2-greeter base-devel dunst blueman xss-lock bashtop
 ```
 
 Network configuration - Use NetworkManager
@@ -105,16 +105,9 @@ makepkg -si
 ### 2. Configure lightdm (logon greeter)
 
 ```bash 
-git clone https://github.com/NoiSek/Aether.git
+yay lightdm-webkit-theme-aether
 ```
 
-```bash
-cd Aether
-```
-
-```bash
-makepkg -si
-```
 
 ```bash
 cd /etc/lightdm
@@ -171,48 +164,48 @@ git clone https://github.com/valeowoia/dotfiles.git
 Copy i3wm configuration
 
 ```bash
-cp ~/dotfiles/i3/ ~/.config/i3/
+cp -r ~/dotfiles/i3/ ~/.config/i3/
 ```
 
 Copy polybar configuration
 
 ```bash
-cp ~/dotfiles/polybar/ ~/.config/polybar/
+cp -r ~/dotfiles/polybar/ ~/.config/polybar/
 ```
 
 Copy additional scripts
 
 ```bash
-cp ~/dotfiles/userconfs/ ~/.config/userconfs/
+cp -r ~/dotfiles/userconfs/ ~/.config/userconfs/
 ```
 
 Copy rofi configuration
 
 ```bash
-cp ~/dotfiles/rofi/ ~/.config/rofi
+cp -r ~/dotfiles/rofi/ ~/.config/rofi
 ```
 
 Copy dunst configuration
 
 ```bash
-cp ~/dotfiles/dunst/ ~/.config/dunst/
+cp -r ~/dotfiles/dunst/ ~/.config/dunst/
 ```
 
 Copy kitty configuration
 
 ```bash
-cp ~/dotfiles/kitty/ ~/.config/kitty/
+cp -r ~/dotfiles/kitty/ ~/.config/kitty/
 ```
 Copy User picture and wallpaper for lightdm
 
 ```bash
-sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png && sudo cp ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo cp ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png
+sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png && sudo cp -r ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo cp -r ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png
 ```
 
 Copy GTK icons and fonts configuration
 
 ```bash
-cp ~/dotfiles/gtk-3.0/ ~/.config/gtk-3.0/
+cp -r ~/dotfiles/gtk-3.0/ ~/.config/gtk-3.0/
 ```
 
 ### 4. Enable Bluetooth for starting on boot
@@ -221,20 +214,21 @@ cp ~/dotfiles/gtk-3.0/ ~/.config/gtk-3.0/
 systemctl enable bluetooth
 ```
 
-### 5. Set up wallpapers for desktop and lockscreen
+### 5. Copy your wallpapers for desktop and lock screen
 
 ```bash
-cp ~/dotfiles/images/wall1.jpg ~/.config/wall1.jpg
+cp  $SOURCE/wall1.jpg ~/.config/wall1.jpg
 ```
 
 ```bash
-cp ~/dotfiles/images/lock1.png ~/.config/lock1.png
+cp  $SOURCE/lock1.png ~/.config/lock1.png
 ```
+### WARNING!!! It must be your display size (eg. 1920x1080 (+-10%) PNG image for lock screen)
 
 ### 6. Install BigBlueTerm nerd fonts for correct polybar working
 
 ```bash
-sudo cp ~/dotfiles/BigBlueTerminal/ /usr/share/fonts/BigBlueTerminal/
+sudo cp -r ~/dotfiles/BigBlueTerminal/ /usr/share/fonts/BigBlueTerminal/
 ```
 
 ```bash
