@@ -101,6 +101,52 @@ sudo cp -r ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aethe
 sudo cp ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png
 cp -r ~/dotfiles/gtk-3.0/ ~/.config/gtk-3.0/
 ```
+Copy i3wm configuration
+
+```bash
+cp -r ~/dotfiles/i3/ ~/.config/i3/
+```
+
+Copy polybar configuration
+
+```bash
+cp -r ~/dotfiles/polybar/ ~/.config/polybar/
+```
+
+Copy additional scripts
+
+```bash
+cp -r ~/dotfiles/userconfs/ ~/.config/userconfs/
+```
+
+Copy rofi configuration
+
+```bash
+cp -r ~/dotfiles/rofi/ ~/.config/rofi
+```
+
+Copy dunst configuration
+
+```bash
+cp -r ~/dotfiles/dunst/ ~/.config/dunst/
+```
+
+Copy kitty configuration
+
+```bash
+cp -r ~/dotfiles/kitty/ ~/.config/kitty/
+```
+Copy User picture and wallpaper for lightdm
+
+```bash
+sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo rm -rf /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png && sudo cp -r ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers/ && sudo cp -r ~/dotfiles/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/avatar-background.png
+```
+
+Copy GTK icons and fonts configuration
+
+```bash
+cp -r ~/dotfiles/gtk-3.0/ ~/.config/gtk-3.0/
+```
 ### 4. Enable Bluetooth for starting on boot
 ```bash
 systemctl enable bluetooth
@@ -126,5 +172,4 @@ sudo pacman -Sy papirus-icon-theme
 ### 8. Reboot your computer to see changes
 ## Credits
 Thanks theese people for helping and some configurations:
-
 *mathisen99, sdomi, mkf, ar, hatkidchan, lisek, q3k, nerd font team, daniruiz*
